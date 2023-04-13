@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back 2 Skool 2 - Electric Boogaloo 🐱‍🐉</title>
+    <style>
+		.container {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			align-items: center;
+			min-height: 100vh;
+		}
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.button {
+			font-size: 24px;
+			padding: 16px 32px;
+			align-self: flex-start;
+			margin: 0 0 16px 0;
+			animation: spin 5s linear infinite;
+		}
+		@keyframes spin {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+    <script>
+		function generateCat() {
+			const catImage = document.getElementById("cat-image");
+			catImage.src = "https://cataas.com/cat?width=300&height=200&timestamp=" + new Date().getTime();
+			catImage.width = 300;
+			catImage.height = 200;
+		}
+	</script>
+    <script 
+        type="text/javascript"
+        src="https://public.tableau.com/javascripts/api/tableau-2.min.js">
+    </script>
+</head>
+
+<body>
+  
+    <div class="container">
+		<div class="content">
+			<h1>🤑 Back 2 Skool 2 - Electric Boogaloo 🐱‍🐉</h1>
+			<button class="button" onclick="generateCat()">Cat!</button>
+			<div>
+				<img id="cat-image" src="">
+			</div>
+
+            <div>
+                <button class="button" id="exportPDF">
+                    I WANT PDF 🥵
+                </button>
+                <button class="button" id="exportPPT">
+                    POWERPOINT TIME!! 👶👼🐣📈
+                </button>
+            </div>
+
+            <hr />
+
+            <h2>filterssss</h2>
+            <div>
+                <input type="number" placeholder="Min Value" id="minValue">
+                <input type="number" placeholder="Max Value" id="maxValue">
+                <button id="FilterButton">do the filtering pls</button>
+            </div>
+
+            <div id="vizContainer">
+                <h3>tab dashboard</h3>
+                <!-- This is where we put tab dashboard -->
+            </div>
+
+            <script src="./app.js">
+
+            </script>
+            <link rel="stylesheet" href="./style.css">
+
+		</div>
+	</div>
+
+</body>
+</html>

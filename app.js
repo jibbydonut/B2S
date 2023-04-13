@@ -1,3 +1,4 @@
+// 
 console.log("Hallo b2s")
 let viz;
 // 1. create variable to store vizContainer
